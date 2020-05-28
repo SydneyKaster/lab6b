@@ -35,13 +35,13 @@ pymol pymolCmnds.pml -qc
 # retrieve the CA atoms IDs of the residues 25 and 51 of all structures
 for i in `seq 0 7`;
 do
-  aa25x[$i]=`grep "A 25" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $7}'`
-  aa25y[$i]=`grep "A 25" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $8}'`
-  aa25z[$i]=`grep "A 25" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $9}'`
+  aa25x[$i]=`grep "A  25" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $7}'`
+  aa25y[$i]=`grep "A  25" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $8}'`
+  aa25z[$i]=`grep "A  25" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $9}'`
 
-  aa51x[$i]=`grep "A 51" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $7}'`
-  aa51y[$i]=`grep "A 51" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $8}'`
-  aa51z[$i]=`grep "A 51" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $9}'`
+  aa51x[$i]=`grep "A  51" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $7}'`
+  aa51y[$i]=`grep "A  51" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $8}'`
+  aa51z[$i]=`grep "A  51" ${pdbIDs[$i]}_aligned.pdb | grep "ATOM" | grep "CA" | head -1 | awk '{print $9}'`
 done
 
 # perform flap/active site distance calculations
